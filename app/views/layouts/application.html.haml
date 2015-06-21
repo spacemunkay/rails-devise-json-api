@@ -1,0 +1,41 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{ name: "viewport", content: "width=device-width", "initial-scale" => "1.0"}
+    %title= content_for?(:title) ? yield(:title) : "RailsDeviseJSONAPI"
+    = csrf_meta_tags
+    = stylesheet_link_tag "bootstrap", "application", :media => "all"
+    /[if lt IE 9]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+      
+  %body
+    %nav{class: "navbar navbar-default", role: "navigation"}
+      %div{class: "container-fluid"}
+      /[Brand and toggle get grouped for better mobile display]
+        %div{class: "navbar-header"}
+          %button{type: "button", class: "navbar-toggle", 'data-toggle' => "collapse", 'data-target' => "#bs-example-navbar-collapse-1"}
+            %span{class: "sr-only"} Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a{class:"navbar-brand", href:"/"}
+
+        /[Collect the nav links, forms, and other content for toggling]
+        %div{class: "collapse navbar-collapse", id:"bs-example-navbar-collapse-1"}
+          %ul{class: "nav navbar-nav navbar-right"}
+          - if user_signed_in?
+            %li
+              %input{id: "index_logout", value: "Logout", "data-url" => destroy_user_session_path }
+
+    .container
+      - if flash[:notice]
+        %p{:class => 'notice'}= flash[:notice]
+      - if flash[:alert]
+        %p{:class => 'alert'}= flash[:alert]
+
+    %footer
+      %p &copy; RailsDeviseJsonAPI #{Time.now.year}
+
+    = javascript_include_tag "application"
+    = javascript_include_tag params[:controller] 

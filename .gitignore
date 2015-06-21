@@ -1,0 +1,14 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+*.swp
+.powrc
+.rbenv-version
+.DS_Store
+public/extjs
+public/assets
+public/images/icons
+config/database.yml
+vendor/
+.sass-cache/

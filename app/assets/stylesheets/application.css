@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require bootstrap_and_overrides
+*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.x-boundlist-item {
+  white-space: nowrap;
+}
+
+.container {
+	max-width: 940px;
+	margin: 0 auto;
+}
+
+.container img {
+	display: block;
+	margin: 0 auto;
+}
+
+p {
+	text-align: center;
+	padding: 20px 0;
+}
+
+a {
+text-decoration: none;
+}
+
+.check_box {
+	width: 30px;
+	height: 30px;
+	background-color: white;
+}
+
+label {
+	font-size: x-large;
+}
+
+/* navigation styling */
+
+.navbar-default {
+  background-color: #428bca;
+  border-color: #428bca;
+	border-radius: 0px;
+}
+
+.navbar > .container-fluid .navbar-brand {
+margin-left: -15px;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+  list-style: none;
+}
+
+.navbar-brand {
+	float: left;
+	padding: 15px 15px;
+	font-size: 18px;
+	line-height: 20px;
+	height: 50px;
+}
+
+.navbar-default a:hover {
+  color: #d1b84a !important;
+}
